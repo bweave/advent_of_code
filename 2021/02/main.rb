@@ -102,7 +102,7 @@ class Part2
   end
 end
 
-input = File.read("input.txt")
+input = File.read(File.join(__dir__, "input.txt"))
 puts "=" * 80
 puts  "Part1: #{Part1.new(input).call}"
 puts  "Part2: #{Part2.new(input).call}"

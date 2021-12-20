@@ -200,7 +200,7 @@ class Cell
   end
 end
 
-input = File.read("input.txt")
+input = File.read(File.join(__dir__, "input.txt"))
 puts "=" * 40
 puts "Part1: #{Bingo.new(input, strategy: FirstWinner).play.score}"
 puts "Part2: #{Bingo.new(input, strategy: LastWinner).play.score}"

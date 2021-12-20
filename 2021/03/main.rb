@@ -105,7 +105,7 @@ class Part1
   end
 end
 
-input = File.read("input.txt")
+input = File.read(File.join(__dir__, "input.txt"))
 puts "=" * 40
 puts "Part1: #{Part1.new(input).power_consumption}"
 puts "Part2: #{Part1.new(input).life_support_rating}"

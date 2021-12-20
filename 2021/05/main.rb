@@ -192,7 +192,7 @@ class CoordinatePair
   end
 end
 
-input = File.read("input.txt")
+input = File.read(File.join(__dir__, "input.txt"))
 puts "=" * 40
 puts "Part1: #{ HydrothermalVents.new(input).danger_zone_count}"
 puts "Part2: #{ HydrothermalVents.new(input, include_diagonals: true).danger_zone_count}"
