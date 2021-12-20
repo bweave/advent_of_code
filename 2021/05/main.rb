@@ -105,11 +105,7 @@ class HydrothermalVents
   end
 
   def danger_zone_count
-    lines
-      .flatten(1)
-      .group_by(&:itself)
-      .values
-      .count { |group| group.count >= 2 }
+    lines.flatten(1).tally.count { |_, tally| tally >= 2 }
   end
 
   def lines
